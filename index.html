@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <h1>WEATHER DASHBOARD</h1>
+    </header>
+    <main>
+      <div class="flexbox">
+        <aside>
+          <input class="searchbar" id="submit"type="text" />
+          <button class="searchbtn">SEARCH</button>
+          <ul class="citieslist">
+            <li class="recentcities">
+              <a id="recentsearch">PLACEHOLDER</a>
+            </li>
+            <li class="recentcities">
+              <a id="recentsearch">PLACEHOLDER</a>
+            </li>
+            <li class="recentcities">
+              <a id="recentsearch">PLACEHOLDER</a>
+            </li>
+            <li class="recentcities">
+              <a id="recentsearch">PLACEHOLDER</a>
+            </li>
+            <li class="recentcities">
+              <a id="recentsearch">PLACEHOLDER</a>
+            </li>
+          </ul>
+        </aside>
+        <div class="big-one">
+          <h2 id="currentday">PLACEHOLDER <h2 id="date"></h2></h2>
+          <p id="temp">TEMP</p>
+          <p id="wind">WIND</p>
+          <p id="humidity">HUMIDITY</p>
+        </div>
+      </div>
+      <div class="cardcontainer">
+        <div class="cards">
+          <h3 id="day1">PLACEHOLDER</h3>
+          <p id="temp">TEMP</p>
+          <p id="wind">WIND</p>
+          <p id="humidity">HUMIDITY</p>
+        </div>
+        <div class="cards">
+          <h3 id="day2">PLACEHOLDER</h3>
+          <p id="temp">TEMP</p>
+          <p id="wind">WIND</p>
+          <p id="humidity">HUMIDITY</p>
+        </div>
+        <div class="cards">
+          <h3 id="day3">PLACEHOLDER</h3>
+          <p id="temp">TEMP</p>
+          <p id="wind">WIND</p>
+          <p id="humidity">HUMIDITY</p>
+        </div>
+        <div class="cards">
+          <h3 id="day4">PLACEHOLDER</h3>
+          <p id="temp">TEMP</p>
+          <p id="wind">WIND</p>
+          <p id="humidity">HUMIDITY</p>
+        </div>
+        <div class="cards">
+          <h3 id="day5">PLACEHOLDER</h3>
+          <p id="temp">TEMP</p>
+          <p id="wind">WIND</p>
+          <p id="humidity">HUMIDITY</p>
+        </div>
+      </div>
+    </main>
+    <script src="https://api.openweathermap.org/data/2.5/forecast?q=London&appid=61aa3733fa83482d5be3ca86bd4a8fdf"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
