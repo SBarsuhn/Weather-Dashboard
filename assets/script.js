@@ -1,13 +1,12 @@
 const searchEl = document.querySelector(".searchbar");
 const recentSearch = document.querySelector("#recentsearch");
-// const apiKey = "61aa3733fa83482d5be3ca86bd4a8fdf"
 $(function () {
   let currentdate = dayjs().format("ddd MMM D YYYY");
   $("#date").text(currentdate);
 
   $(".searchbtn").on("click", function (event) {
     event.preventDefault();
-    let city = $(this).siblings(".searchbar").val();
+    let city = $(".searchbar").val();
     if (city) {
       searchEl.textContent = "";
       localStorage.setItem(recentSearch, city);
@@ -24,26 +23,61 @@ $(function () {
         "&units=imperial&appid=61aa3733fa83482d5be3ca86bd4a8fdf";
       fetch(apiUrl)
         .then((response) => response.json())
-        .then((data) => showWeather(data));
+        .then((data) => {console.log(data)
+        let icon = data.list[0].weather[0].icon
+        let iconUrl = `https://openweathermap.org/img/w/${icon}.png`
+        
+        let cityName = $(`
+          <div>${data.city.name}
+            </div>
+          
+            `);
+            $("#name").append(cityName);
+        let temp = $(`
+        <p> TEMP: ${data.list[0].main.temp}
+        </p>`)
+        $("#temp").append(temp)
 
-      function showWeather(data) {
-        const { name } = data;
-        const { icon } = data.weather[0];
-        const { temp, humidity } = data.main;
-        const { speed } = data.wind;
-        console.log(name, icon, temp, humidity, speed);
-      }
+        let wind = $(`
+        <p> WIND: ${data.list[0].wind.speed}
+        </p>`)
+        $("#wind").append(wind)
+
+        let humidity = $(`
+        <p> HUMIDITY: ${data.list[0].main.humidity}
+        </p>`)
+        $("#humidity").append(humidity)
+
+        let iconEl = $(`
+        <img src = "${iconUrl}"
+        />`)
+        $(".big-one").append(iconEl)
+
+          let lat = data.city.coord.lat
+          let lon = data.city.coord.lon
+          console.log(lat, lon)
+
+    });
+        
+      // function fiveDay() {
+      //   // need to grab lat and lon from the data in the first fetch
+      //   let fiveDayApi =
+      //     "https://api.openweathermap.org/data/2.5/forecast?lat=" +
+      //     lat +
+      //     "&lon=" +
+      //     lon +
+      //     "&units=imperial&appid=61aa3733fa83482d5be3ca86bd4a8fdf";
+      //     fetch(fiveDayApi)
+      //     .then((response) => response.json())
+      //     .then((data) => console.log(data))
+
+      // }
     }
   });
 });
 
-// api.openweathermap.org/data/2.5/forecast?q=[CITY NAME]&appid=61aa3733fa83482d5be3ca86bd4a8fdf
-// function getWeather() {
-//   let apiUrl =
-//     "https://api.openweathermap.org/data/2.5/forecast?q=" + city +"&appid=61aa3733fa83482d5be3ca86bd4a8fdf";
-//   fetch(apiUrl).then(function (response) {
-//     if (response.ok) {
-//       console.log(response);
-//     }
-//   });
-// };
+// apiKey = "61aa3733fa83482d5be3ca86bd4a8fdf"
+
+// api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&units=imperial&appid=61aa3733fa83482d5be3ca86bd4a8fdf
+
+// api.openweathermap.org/data/2.5/forecast?q=[CITY NAME]&units=imperial&appid=61aa3733fa83482d5be3ca86bd4a8fdf
