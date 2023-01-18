@@ -42,6 +42,8 @@ header {
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 25px;
+  width: 68%;
+  float: right;
 }
 
 aside {
@@ -53,7 +55,7 @@ aside {
 
 li {
   list-style: none;
-  line-height: 42px;
+  line-height: 50px;
 }
 
 .recentcities {
@@ -102,10 +104,13 @@ li {
 
 /* @keyframes slideup {
     0% {
-      transform: translateY(2000%);
+      transform: translateY(100%);
     } 
+    75% {
+      transform: translateY(0%);
+    }
     90% {
-      transform: translateY(-20%)  
+      transform: translateY(-15%); 
     }
     100% {
       transform: translateY(0);
