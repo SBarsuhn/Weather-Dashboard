@@ -76,13 +76,23 @@ li {
 }
 
 .searchbar {
-  background-image: linear-gradient(135deg, #006280, #219175);
+
+  background-image: linear-gradient(135deg, #5099af, #62cfb4);
   width: 100%;
   height: 30px;
   text-align: center;
   font-size: 24px;
   font-weight: bolder;
   border-radius: 5px;
+}
+
+.searchbar::placeholder {
+  color:rgb(44, 44, 44);
+  transition: 0.1s ease;
+}
+
+.searchbar:focus::placeholder{
+  color:transparent
 }
 
 .searchbtn {
@@ -95,6 +105,10 @@ li {
   margin-left: 25px;
   margin-right: 25px;
   border-radius: 5px;
+}
+
+.searchbtn:active{
+  background-image: linear-gradient(135deg, #5099af, #62cfb4);
 }
 
 .flexbox {

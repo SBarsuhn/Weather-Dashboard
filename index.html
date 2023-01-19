@@ -13,8 +13,8 @@
     </header>
     <main>
       <div class="flexbox">
-        <form>
-          <input class="searchbar" id="submit" type="text" />
+        <aside>
+          <input class="searchbar" type="text" placeholder="Search for a city"/>
           <button class="searchbtn">SEARCH</button>
           <ul class="citieslist">
             <li class="recentcities">
@@ -33,7 +33,7 @@
               <a id="recentsearch">PLACEHOLDER</a>
             </li>
           </ul>
-        </form>
+        </aside>
         <div class="big-one">
           <h2 id="name"><h2 id="date"></h2></h2>
           <p id="temp"></p>
@@ -42,37 +42,7 @@
           
         </div>
       </div>
-      <div class="cardcontainer">
-        <!-- <div class="cards">
-          <h3 id="day1">PLACEHOLDER</h3>
-          <p id="temp">TEMP</p>
-          <p id="wind">WIND</p>
-          <p id="humidity">HUMIDITY</p>
-        </div>
-        <div class="cards">
-          <h3 id="day2">PLACEHOLDER</h3>
-          <p id="temp">TEMP</p>
-          <p id="wind">WIND</p>
-          <p id="humidity">HUMIDITY</p>
-        </div>
-        <div class="cards">
-          <h3 id="day3">PLACEHOLDER</h3>
-          <p id="temp">TEMP</p>
-          <p id="wind">WIND</p>
-          <p id="humidity">HUMIDITY</p>
-        </div>
-        <div class="cards">
-          <h3 id="day4">PLACEHOLDER</h3>
-          <p id="temp">TEMP</p>
-          <p id="wind">WIND</p>
-          <p id="humidity">HUMIDITY</p>
-        </div>
-        <div class="cards">
-          <h3 id="day5">PLACEHOLDER</h3>
-          <p id="temp">TEMP</p>
-          <p id="wind">WIND</p>
-          <p id="humidity">HUMIDITY</p>
-        </div> -->
+      <div class="cardcontainer" id="cardcontainer" >
       </div>
     </main>
     <script src="https://api.openweathermap.org/data/2.5/forecast?q=London&appid=61aa3733fa83482d5be3ca86bd4a8fdf"></script>
