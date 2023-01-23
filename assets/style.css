@@ -1,19 +1,21 @@
 :root {
-  background-color: #87c4a5;
+  background-image: url(./images/wendy-bandurski-miller-dqKb76-Cf5s-unsplash.jpg);
+  color: rgba(255, 255, 255, 0.7);
+  background-repeat: no-repeat;
+  background-size:fill;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
   text-align: center;
-  background-image: linear-gradient(-135deg, #006280, #219175);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 25px;
   font-weight: bolder;
-  text-shadow: #219175 2px 5px 5px;
+  border-radius: 25px;
 }
 
 .big-one {
-  /* background-color:#006280; */
-  background-image: linear-gradient(-135deg, #006280, #219175);
+  background-color: rgba(0, 0, 0, 0.6);
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 25px;
@@ -21,19 +23,19 @@ header {
   margin: 50px;
   width: 65%;
   height: 300px;
-  box-shadow: darkslategray 7px 10px 5px;
-  border-radius: 5px;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 .cards {
-  background-color: #006280;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
   display: inline-block;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
   line-height: 2em;
   height: 300px;
-  box-shadow: darkslategray 7px 10px 5px;
-  border-radius: 5px;
+  width:200px;
+  border-radius: 20px;
   animation: 1s ease-out 0s 1 slideup;
 }
 .cardcontainer {
@@ -50,44 +52,46 @@ aside {
   width: 25%;
   height: 300px;
   margin-top: 50px;
-  margin-left: 50px;
+  margin-left: 50px; 
 }
 
-li {
-  list-style: none;
-  line-height: 50px;
-}
 
 .recentcities {
-  background-color: #006280;
-  font-weight: bolder;
-  border-radius: 5px;
-  border-style: inset;
-  border-color: #006280;
-  margin: 5px;
-}
-
-.citieslist {
-  padding: 10px;
+  padding-right: 3px;
   padding-top: 0px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 
-.searchbar {
-
-  background-image: linear-gradient(135deg, #5099af, #62cfb4);
-  width: 100%;
+#recentsearch {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  width: 90%;
   height: 30px;
   text-align: center;
   font-size: 24px;
+  margin-top: 10px;
+  border-radius: 20px;
+
+
+}
+
+button {
+  padding-bottom:30px;
+}
+
+.searchbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  height: 40px;
+  text-align: center;
+  font-size: 24px;
   font-weight: bolder;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .searchbar::placeholder {
-  color:rgb(44, 44, 44);
+  color:rgba(255, 255, 255, 0.5);
   transition: 0.1s ease;
 }
 
@@ -96,19 +100,18 @@ li {
 }
 
 .searchbtn {
-  background-image: linear-gradient(135deg, #006280, #219175);
-  width: 90%;
-  height: 30px;
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 40px;
+  height: 40px;
   font-size: 24px;
-  margin-top: 10px;
-  margin-left: 25px;
-  margin-right: 25px;
-  border-radius: 5px;
+  padding-top: 3px;
+  border-radius: 20px;
 }
 
-.searchbtn:active{
-  background-image: linear-gradient(135deg, #5099af, #62cfb4);
+button:active{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+
 }
 
 .flexbox {
@@ -118,15 +121,12 @@ li {
 
 /* @keyframes slideup {
     0% {
-      transform: translateY(100%);
-    } 
-    75% {
-      transform: translateY(0%);
+      transform: translateX(3000%);
     }
     90% {
-      transform: translateY(-15%); 
+      transform: translateX(-25%)
     }
     100% {
-      transform: translateY(0);
+      transform: translateX(0);
     }
   } */
