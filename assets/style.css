@@ -62,7 +62,7 @@ aside {
 }
 
 #recentsearch {
-  font-weight: bold;
+  font-weight: light;
   background-color: rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 0.5);
   width: 90%;
@@ -70,7 +70,9 @@ aside {
   text-align: center;
   font-size: 24px;
   margin-top: 10px;
+  padding-top: 5px;
   border-radius: 20px;
+  text-transform: uppercase;
 
 
 }
