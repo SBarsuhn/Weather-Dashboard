@@ -36,17 +36,17 @@ $(function () {
         $("#name").html(cityName);
 
         let temp = $(`
-      <p> TEMP: ${data.list[0].main.temp}
+      <p> TEMP: ${data.list[0].main.temp} °
       </p>`);
         $("#temp").html(temp);
 
         let wind = $(`
-      <p> WIND: ${data.list[0].wind.speed}
+      <p> WIND: ${data.list[0].wind.speed}%
       </p>`);
         $("#wind").html(wind);
 
         let humidity = $(`
-      <p> HUMIDITY: ${data.list[0].main.humidity}
+      <p> HUMIDITY: ${data.list[0].main.humidity} mph
       </p>`);
         $("#humidity").html(humidity);
 
@@ -90,13 +90,13 @@ $(function () {
             src = "${fiveDayIconUrl}"
             />
             <p>
-            TEMP: ${fiveDayArray[i].main.temp}
+            TEMP: ${fiveDayArray[i].main.temp} °
             </p>
             <p>
-            HUMIDITY: ${fiveDayArray[i].main.humidity}
+            HUMIDITY: ${fiveDayArray[i].main.humidity}%
             </p>
             <p>
-            WIND: ${fiveDayArray[i].wind.speed}
+            WIND: ${fiveDayArray[i].wind.speed} mph
             </p>
             </div>
             `);
