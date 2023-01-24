@@ -8,13 +8,13 @@ This was also my first time using an API in a website so I learned how to call f
 
 ## Installation
 
-There is no intalation required for this prject. Just go to the website and type a city in the searchbar.
+There is no intallation required for this prject. Just go to the website and type a city in the searchbar.
 
 ## Usage
 
 Start using the application by searching for a city. It will be added to the recent search tab on the side of the page. The current information as well as the five day forecast will appear on the page. From there you can search for other cities. At any time click on one of the recent cities buttons to view the information from that city.
 
-![Application Preview](assets\images\weatherdashboardpreview.png)
+![Application Preview](assets/images/weatherdashboardpreview.png)
 
 ## Credits
 
